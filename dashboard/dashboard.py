@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 st.title("📊 Dashboard E-Commerce")
 
 # Load dataset dari file yang diunggah
-all_df = pd.read_csv("all_data.csv")
+https://raw.githubusercontent.com/ilmahrafia/submission-dataset/refs/heads/main/dashboard/all_data.csv
 
 # Sidebar untuk memilih analisis
 st.sidebar.header("📌 Pilih Analisis")
