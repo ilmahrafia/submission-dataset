@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 st.title("📊 Dashboard E-Commerce")
 
 # Load dataset dari file yang diunggah
-all_df = pd.read_csv("dashboard/all_data.csv")
+all_df = pd.read_csv("all_data.csv")
 
 # Mengonversi kolom tanggal jika tersedia
 date_column = "order_purchase_timestamp"  # Ganti dengan nama kolom tanggal yang benar
