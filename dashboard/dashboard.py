@@ -9,21 +9,13 @@ st.title("📊 Dashboard E-Commerce")
 # Load dataset dari file yang diunggah
 all_df = pd.read_csv("all_data.csv")
 
-# Mengonversi kolom tanggal jika tersedia
-date_column = "order_purchase_timestamp"  # Ganti dengan nama kolom tanggal yang benar
-if date_column in all_df.columns:
-    all_df[date_column] = pd.to_datetime(all_df[date_column])
+
 
 # Sidebar untuk memilih analisis
 st.sidebar.header("📌 Pilih Analisis")
 option = st.sidebar.radio("Pilih Data yang Ingin Ditampilkan", ["Seller dengan Pesanan Terbanyak", "Produk Paling Banyak Dibeli"])
 
-# Filter berdasarkan rentang tanggal
-if date_column in all_df.columns:
-    min_date = all_df[date_column].min()
-    max_date = all_df[date_column].max()
-    date_range = st.sidebar.date_input("Pilih Rentang Tanggal", [min_date, max_date], min_value=min_date, max_value=max_date)
-    all_df = all_df[(all_df[date_column] >= pd.to_datetime(date_range[0])) & (all_df[date_column] <= pd.to_datetime(date_range[1]))]
+
 
 # Filter berdasarkan kategori produk
 if "product_category_name" in all_df.columns:
