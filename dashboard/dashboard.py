@@ -7,7 +7,10 @@ import matplotlib.pyplot as plt
 st.title("📊 Dashboard E-Commerce")
 
 # Load dataset dari file yang diunggah
-all_df = pd.read_csv("all_data.csv")
+# all_df = pd.read_csv("all_data.csv")
+file_url = "https://drive.google.com/file/d/1R62iyShGCDqri3SKZe9-_x2lDRUomgWT/view?usp=sharing"
+all_df = pd.read_csv(file_url)
+
 
 
 
